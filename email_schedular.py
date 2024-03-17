@@ -28,10 +28,10 @@ def send_email():
 
     def send_email_thread():
         try:
-            smtp_server = 'smtp.gmail.com'  # Update this with your SMTP server
-            smtp_port = 465  # Update this with the SMTP port
-            username = 'your_email@gmail.com'  # Update this with your email
-            password = 'your_email_password'  # Update this with your email password
+            smtp_server = 'smtp.gmail.com'  
+            smtp_port = 465  
+            username = 'your_email@gmail.com'  
+            password = 'your_email_password'  
             
             msg = MIMEMultipart()
             msg['From'] = username
@@ -51,11 +51,11 @@ def send_email():
 
     threading.Thread(target=send_email_thread).start()
 
-# Create the GUI window
+
 root = tk.Tk()
 root.title("Email Scheduler")
 
-# Create and place widgets
+
 to_email_label = tk.Label(root, text="To:")
 to_email_label.pack()
 to_email_entry = tk.Entry(root)
